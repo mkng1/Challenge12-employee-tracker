@@ -17,11 +17,17 @@ async function initMap() {
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
   const { LatLng } = await google.maps.importLibrary("core");
   const center = new LatLng(37.43238031167444, -122.16795397128632);
-  const map = new Map(document.getElementById("map"), {
-    zoom: 11,
-    center,
-    mapId: "4504f8b37365c3d0",
-  });
+  // const map = new Map(document.getElementById("map"), {
+  //   zoom: 11,
+  //   center,
+  //   mapId: "4504f8b37365c3d0",
+  // });
+  const map = new
+  google.maps.Map(document.getElementById('map'), {
+  center: {lat: -34.397, lng: 150.644},
+  zoom: 8,
+  mapId: 'd13ebef7973e4ad2'
+});
 
   for (const property of properties) {
     const AdvancedMarkerElement = new google.maps.marker.AdvancedMarkerElement({
